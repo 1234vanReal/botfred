@@ -1,20 +1,15 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <title>BotFred Chat</title>
+  <meta charset="UTF-8">
+  <title>BotFred </title>
 </head>
 <body>
-    <h1> Willkommen bei BotFred!</h1>
-
-    <form method="POST" action="/antwort">
-        <input type="text" name="eingabe" placeholder="Frag mich was..." required>
-        <button type="submit">Senden</button>
-    </form>
-
-    {% if user_input %}
-        <p><strong>Du:</strong> {{ user_input }}</p>
-        <p><strong>BotFred:</strong> {{ bot_reply }}</p>
-    {% endif %}
+  <h1>Willkommen bei BotFred!</h1>
+  <form method="post">
+    <input type="text" name="frage" placeholder="Was heißt Toastbrot?" required>
+    <button type="submit">Fragen</button>
+  </form>
+  <p><strong>Antwort:</strong> {{ antwort }}</p>
 </body>
 </html>
