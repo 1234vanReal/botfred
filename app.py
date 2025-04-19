@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request
 from ai4 import botfred  # Importiere deine Botfunktion aus ai4.py
 
-app = Flask(__name__)
+
 
 @app.route("/", methods=["GET", "POST"])
 def home():
@@ -13,3 +13,4 @@ def home():
 
 if __name__ == "__main__":
     app.run(debug=True)
+    app = Flask(__name__, template_folder='templates')
